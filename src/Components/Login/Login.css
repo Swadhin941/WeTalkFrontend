@@ -1,0 +1,9 @@
+.loginContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(farthest-corner at 100% 100%, rgb(185, 5, 202), rgb(232, 26, 214), rgb(136, 22, 135)
+    );
+    color: blueviolet;
+}

@@ -1,0 +1,22 @@
+.messageBox {
+    background-color: #E6E6FA;
+    padding: 5px 4px;
+}
+
+.allMessagesDiv {
+    height: 78vh;
+    margin-top: 10px;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.miniWindowOne{
+    height: auto;
+    width: auto;
+    background-color: white;
+    position: absolute;
+    right: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}

@@ -1,0 +1,13 @@
+.pageNotFoundContainer{ 
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.errorCode{
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 12rem;
+    margin-bottom: 0px;
+}
