@@ -24,7 +24,6 @@ const AllMessages = ({ selectedPerson, setSelectedPerson, chatedPersonLoad, setC
     //Selected Persons All Message;
     useEffect(() => {
         if (selectedPerson) {
-            console.log(selectedPerson);
             setDataLoading(true);
             setBlocked(null);
             fetch(`${process.env.REACT_APP_SERVER}/getAllMessages?user=${user?.email}&to=${selectedPerson?.receiver}`, {
@@ -77,7 +76,6 @@ const AllMessages = ({ selectedPerson, setSelectedPerson, chatedPersonLoad, setC
         const currentTime = new Date().toLocaleTimeString();
         const currentDate = new Date().toLocaleDateString()
         socket.emit('reactEvent', { data: messageRef.current.value, roomAddress: updatedPerson?.roomAddress, sender: user?.email, receiver: updatedPerson?.receiver, currentTimeMili, currentTime, currentDate, token: `bearer ${localStorage.getItem('token')}`, email: user?.email }, (response) => {
-            console.log(response);
             if (response.status) {
                 if (response.status) {
                     if (response.status === 'Denied') {
@@ -105,7 +103,6 @@ const AllMessages = ({ selectedPerson, setSelectedPerson, chatedPersonLoad, setC
         socket.emit('joinRoom', { roomAddress: updatedPerson?.roomAddress });
         socket.emit('typing', { data: e.target.value, joinRoom: updatedPerson?.roomAddress, token: `bearer ${localStorage.getItem('token')}`, email: user?.email }, (response) => {
             if (response.status) {
-                console.log(response.status);
                 if (response.status === 'Denied') {
                     logout()
                     navigate('/login');

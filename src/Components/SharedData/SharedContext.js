@@ -67,7 +67,6 @@ const SharedContext = ({ children }) => {
     useEffect(() => {
         const check = onAuthStateChanged(auth, currentUser => {
             // if (currentUser === null || currentUser.emailVerified) {
-                // console.log(currentUser);
                 setUser(currentUser);
             // }
             setLoading(false);

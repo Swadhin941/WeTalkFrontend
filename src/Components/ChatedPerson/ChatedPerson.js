@@ -44,10 +44,9 @@ const ChatedPerson = ({ setSelectedChat, chatedPersonLoad, selectedChat, chatted
 
 
                 })
-            // .catch(error => {
-            //     toas
-            //     console.log(error.message)
-            // })
+            .catch(error => {
+                toast.error(error.message);
+            })
         }
     }, [user, chatedPersonLoad])
 
