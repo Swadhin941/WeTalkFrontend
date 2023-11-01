@@ -7,3 +7,4 @@ It's a basic MERN stack project which name is WeTalk. It is basically simple cha
 6. User can update his profile information
 
 Live link: https://chattingapp-a9455.web.app
+****Note: This app is only made as a web version of Chatting App.*** 
